@@ -28,11 +28,11 @@ export default function Navbar() {
         {username && (
           <>
             <li className="push-left">
-              <button onClick={signOut}>Sign Out</button>
+              <button className={"btn-red"} onClick={signOut}>Odhlásit se 👋 </button>
             </li>
             <li>
               <Link href="/admin">
-                <button className="btn-blue">Write Posts</button>
+                <button className="btn-green">Napsat článek 🖊️</button>
               </Link>
             </li>
             <li>

@@ -64,11 +64,11 @@ export default function Home(props) {
 
           <PostFeed posts={posts} />
 
-          {!loading && !postsEnd && <button onClick={getMorePosts}>Load more</button>}
+          {!loading && !postsEnd && <button onClick={getMorePosts}>Více článků</button>}
 
           <Loader show={loading} />
 
-          {postsEnd && 'You have reached the end!'}
+          {postsEnd && 'Tady už nic není!'}
       </main>
 
 

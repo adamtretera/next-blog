@@ -3,8 +3,8 @@
 :root {
   --color-bg: #eef0f1;
   --color-text: #08090a;
-  --color-blue: #29335C;
-  --color-red: #29335C;
+  --color-blue: #fcce2e;
+  --color-red: #ff5959;
   --color-green: #3bdf72;
   --color-gray: #b5bdc4;
 }
@@ -69,8 +69,8 @@ code {
   position: fixed;
   top: 0;
 
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   padding: 0 10vw;
   font-weight: bold;
   z-index: 99;
@@ -104,25 +104,25 @@ code {
 /* Buttons */
 
 .btn, button {
-  background-color: var(--color-gray);
+  background-color: var(--color-red);
   border: none;
-  color: var(--color-text);
+  color:white;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
   margin: 0.5rem 1rem 0.5rem ;
 }
 
 @media only screen and (max-width: 768px) {
   button {
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -140,22 +140,25 @@ button[disabled]{
 button.btn-blue {
   background-color: transparent;
   color: var(--color-text);
-  font-size: 1rem;
+
 }
 
 button.btn-red {
   background-color: var(--color-red);
   color: white;
+
 }
 
 button.btn-green {
-  background-color: var(--color-green);
+  background-color: var(--color-blue);
   color: white;
+
 }
 
 button.btn-google {
   background-color: white;
   color: var(--color-text);
+  font-size: 1rem;
 }
 
 .btn-google img {
@@ -168,6 +171,7 @@ button.btn-logo {
   color: var(--color-text);
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
+
 }
 .grid{
   display: grid;

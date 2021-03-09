@@ -31,7 +31,7 @@ function PostList() {
 
   return (
     <>
-      <h1>Manage your Posts</h1>
+      <h1>Spravuj svoje posty</h1>
       <PostFeed posts={posts} admin />
     </>
   );

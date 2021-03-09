@@ -13,7 +13,7 @@ function PostItem({ post, admin = false }) {
     <div className="card">
       <Link href={`/${post.username}`}>
         <a>
-          <strong>By @{post.username}</strong>
+          <strong>Od @{post.username}</strong>
         </a>
       </Link>
 
@@ -25,9 +25,13 @@ function PostItem({ post, admin = false }) {
 
       <footer>
         <span>
-          {wordCount} words. {minutesToRead} min read
+          {wordCount} slov. {minutesToRead} min čtení
         </span>
         <span className="push-left">💗 {post.heartCount || 0} Hearts</span>
+
+          {post.published ? <p className="text-success">Živě</p> : <p className="text-danger">Nepublikováno</p>}
+
+
       </footer>
 
       {/* If admin view, show extra controls for user */}
@@ -35,11 +39,11 @@ function PostItem({ post, admin = false }) {
         <>
           <Link href={`/admin/${post.slug}`}>
             <h3>
-              <button className="btn-blue">Edit</button>
+              <button className="btn-red">Editovat</button>
             </h3>
           </Link>
 
-          {post.published ? <p className="text-success">Live</p> : <p className="text-danger">Unpublished</p>}
+
         </>
       )}
     </div>
