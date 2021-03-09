@@ -20,7 +20,7 @@ export default function Navbar() {
       <ul>
         <li>
           <Link href="/">
-            <button className="btn-logo">NXT</button>
+            <button className="btn-logo">📚 Můj blog</button>
           </Link>
         </li>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
         {!username && (
           <li>
             <Link href="/enter">
-              <button className="btn-blue">Log in</button>
+              <button className="btn-blue">Přihlásit se 🖊️</button>
             </Link>
           </li>
         )}

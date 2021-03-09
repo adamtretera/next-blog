@@ -1,7 +1,7 @@
 import { auth, firestore, googleAuthProvider } from '../lib/firebase';
 import { UserContext } from '../lib/context';
 import Metatags from '../components/Metatags';
-
+import styles from "../styles/Enter.module.css"
 import { useEffect, useState, useCallback, useContext } from 'react';
 import debounce from 'lodash.debounce';
 
@@ -12,9 +12,14 @@ export default function Enter(props) {
   // 2. user signed in, but missing username <UsernameForm />
   // 3. user signed in, has username <SignOutButton />
   return (
-    <main>
-      <Metatags title="Enter" description="Sign up for this amazing app!" />
-      {user ? !username ? <UsernameForm /> : <SignOutButton /> : <SignInButton />}
+    <main className={styles.center}>
+      <div className={styles.card}>
+
+
+        <Metatags title="Enter" description="Sign up for this amazing app!" />
+        {user ? !username ? <UsernameForm /> : <SignOutButton  /> : <SignInButton />}
+
+      </div>
     </main>
   );
 }
@@ -27,11 +32,11 @@ function SignInButton() {
 
   return (
     <>
-      <button className="btn-google" onClick={signInWithGoogle}>
+      <button  className="btn-google "   onClick={signInWithGoogle}>
         <img src={'/google.png'} width="30px" /> Sign in with Google
       </button>
-      <button onClick={() => auth.signInAnonymously()}>
-        Sign in Anonymously
+      <button className="btn-blue" onClick={() => auth.signInAnonymously()}>
+        <img src={'/hacker.png'} width="30px" />  Sign in Anonymously
       </button>
     </>
   );
